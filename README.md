@@ -39,6 +39,7 @@ You can visit the live project here: [Bookstore App](https://magic-bookstore-app
 **Pacifique Linjanja** :man_technologist:
 - GitHub: [@pacyL2K19](https://github.com/pacyL2K19)
 - LinkedIn: [Pacifique Linjanja](https://www.linkedin.com/in/pacifique-linjanja/)
+- AngelList: [Pacifique Linjanja](https://angel.co/u/pacifique-linjanja)
 - Twitter: [@PacifiqueLinja1](https://twitter.com/PacifiqueLinja1)
 
 **Mily Puente** :woman_technologist:
