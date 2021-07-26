@@ -6,7 +6,7 @@
 Web application for helping a (ficitonal) bookstore company organize and manage their online material.
 
 ## Live Project
-You can visit the live project here: [Bookstore App]()
+You can visit the live project here: [Bookstore App](https://magic-bookstore-app.herokuapp.com/)
 
 ## Built With
 - npm
@@ -19,6 +19,7 @@ You can visit the live project here: [Bookstore App]()
 - CSS
 - Eslint / Stylint
 - Jest
+- Heroku
 
 ## How To Run It (Locally)
 1. It's recommended to use Git's latest version
@@ -53,5 +54,5 @@ Visit [issues' section](https://github.com/Milypm/Bookstore-app/issues)
 ## Show Your Support
 Give a :star2: if you like this project!
 
-<!-- ## License
-This project is [MIT Licensed]() -->
+## License
+This project is [MIT Licensed](https://github.com/Milypm/Bookstore-app/blob/feature/setup/LICENSE)
