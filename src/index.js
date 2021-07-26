@@ -1,9 +1,17 @@
 import React from 'react';
+// import Redux from 'react-redux';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
+// const Provider = ReactRedux.Provider;
+
 ReactDOM.render(
+  // <React.StrictMode>
+  //   <Provider>
+  //     <App />
+  //   </Provider>
+  // </React.StrictMode>,
   <React.StrictMode>
     <App />
   </React.StrictMode>,
