@@ -13,6 +13,11 @@ const initialState = {
       category: 'Learning',
       id: Math.floor(Math.random() * 1000),
     },
+    {
+      title: 'Learn Redux',
+      category: 'Learning',
+      id: Math.floor(Math.random() * 1000),
+    },
   ],
 };
 const store = createStore(bookReducer, initialState);
