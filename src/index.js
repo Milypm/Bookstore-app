@@ -1,16 +1,35 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import { uuid } from 'uuidv4';
+import { createStore } from 'redux';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from './components/App';
+import bookReducer from './reducers/books';
 import reportWebVitals from './reportWebVitals';
+
+const initialState = {
+  books: [
+    {
+      title: 'Learn React',
+      category: 'Learning',
+      id: uuid(),
+    },
+    {
+      title: 'Learn Redux',
+      category: 'Learning',
+      id: uuid(),
+    },
+  ],
+};
+const store = createStore(bookReducer, initialState);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
