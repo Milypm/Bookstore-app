@@ -13,13 +13,11 @@ const BooksList = (props) => {
           <th>Category</th>
           <th>Book ID</th>
         </tr>
-        <tr>
-          {
+        {
           books.map((book) => (
             <Book key={book.id} category={book.category} title={book.title} id={book.id} />
           ))
         }
-        </tr>
       </table>
     </div>
   );

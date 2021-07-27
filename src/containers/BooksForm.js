@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const BooksForm = () => {
   const [
@@ -18,11 +18,13 @@ const BooksForm = () => {
     'Learning',
     'Sci-Fi',
   ];
+  const [category, setCategory] = useState(action);
+  const [title, setTitle] = useState('');
   return (
     <form>
-      <input placeholder="Title" />
+      <input placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} />
       <label htmlFor="categories">Choose a Category:</label>
-      <select id="cars" name="cars">
+      <select id="categories" name="categories" value={category} onChange={(e) => setCategory(e.target.value)}>
         <option value="action">{action}</option>
         <option value="biography">{biography}</option>
         <option value="history">{history}</option>
