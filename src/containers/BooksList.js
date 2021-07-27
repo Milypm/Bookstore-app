@@ -12,6 +12,7 @@ const BooksList = (props) => {
           <th>Title</th>
           <th>Category</th>
           <th>Book ID</th>
+          <th>Action</th>
         </tr>
         {
           books.map((book) => (
