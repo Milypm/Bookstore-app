@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import Redux from 'react-redux';
 
 const Book = (props) => {
   const { title, category, id } = props;

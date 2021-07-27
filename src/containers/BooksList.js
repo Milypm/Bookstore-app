@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-// import ReactDOM from 'react-dom'
 import Book from '../components/Book';
 
 const BooksList = (props) => (

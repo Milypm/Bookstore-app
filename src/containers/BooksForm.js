@@ -1,6 +1,4 @@
 import React from 'react';
-// import Redux from 'react-redux';
-// import ReactDOM from 'react-dom'
 
 const BooksForm = () => {
   const [
