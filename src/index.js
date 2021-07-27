@@ -1,5 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
+import { uuid } from 'uuidv4';
 import { createStore } from 'redux';
 import ReactDOM from 'react-dom';
 import App from './components/App';
@@ -11,12 +12,12 @@ const initialState = {
     {
       title: 'Learn React',
       category: 'Learning',
-      id: Math.floor(Math.random() * 1000),
+      id: uuid(),
     },
     {
       title: 'Learn Redux',
       category: 'Learning',
-      id: Math.floor(Math.random() * 1000),
+      id: uuid(),
     },
   ],
 };
