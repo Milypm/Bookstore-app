@@ -1,5 +1,5 @@
 import React from 'react';
-// import Redux from 'react-redux';
+import { connect } from 'react-redux';
 // import ReactDOM from 'react-dom'
 import Book from '../components/Book';
 
@@ -17,5 +17,11 @@ const BooksList = (props) => (
     </table>
   </div>
 );
+const mapStateToProps = (state) => ({
+  books: state.books,
+});
+const mapDispatchToProps = () => ({
 
-export default BooksList;
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(BooksList);

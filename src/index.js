@@ -1,14 +1,12 @@
 import React from 'react';
-// import Redux from 'react-redux';
+// import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
-// const Provider = ReactRedux.Provider;
-
 ReactDOM.render(
   // <React.StrictMode>
-  //   <Provider>
+  //   <Provider store={{ getStore: () => {} }}>
   //     <App />
   //   </Provider>
   // </React.StrictMode>,
