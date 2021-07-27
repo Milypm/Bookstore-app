@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { uuid } from 'uuidv4';
+import { createBook } from '../actions/index';
 
-const BooksForm = () => {
+const BooksForm = (props) => {
   const categories = [
     'Action',
     'Biography',
@@ -12,20 +16,52 @@ const BooksForm = () => {
   ];
   const [category, setCategory] = useState(categories[0]);
   const [title, setTitle] = useState('');
+  const handleChange = (e) => {
+    if (e.nativeEvent.inputType === 'insertText') {
+      setTitle(e.target.value);
+    } else {
+      setCategory(e.target.value);
+    }
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const book = {
+      title,
+      category,
+      id: uuid(),
+    };
+    props.createBook(book);
+    setTitle(categories[0]);
+    setCategory('');
+  };
   return (
     <form>
-      <input placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} />
+      <input placeholder="Title" value={title} onChange={handleChange} />
       <label htmlFor="categories">Choose a Category:</label>
-      <select id="categories" name="categories" value={category} onChange={(e) => setCategory(e.target.value)}>
+      <select id="categories" name="categories" value={category} onChange={handleChange}>
         {
           categories.map((category) => (
             <option key={category} value={category.toLowerCase()}>{category}</option>
           ))
         }
       </select>
-      <button type="submit">Save</button>
+      <button type="submit" onSubmit={handleSubmit}>Save</button>
     </form>
   );
 };
 
-export default BooksForm;
+BooksForm.propTypes = {
+  createBook: PropTypes.func,
+};
+
+BooksForm.defaultProps = {
+  createBook: () => {},
+};
+
+const mapDispatchToProps = (dispatch) => ({
+  createBook: (book) => {
+    dispatch(createBook(book));
+  },
+});
+
+export default connect(null, mapDispatchToProps)(BooksForm);
