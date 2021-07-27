@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { uuid } from 'uuidv4';
 import { createBook } from '../actions/index';
+import types from '../actions/types';
 
 const BooksForm = (props) => {
   const categories = [
@@ -30,7 +31,10 @@ const BooksForm = (props) => {
       category,
       id: uuid(),
     };
-    props.createBook(book);
+    props.dispatch({
+      type: types.ADD_BOOK,
+      payload: book
+    })
     setTitle(categories[0]);
     setCategory('');
   };
@@ -51,11 +55,12 @@ const BooksForm = (props) => {
 };
 
 BooksForm.propTypes = {
-  createBook: PropTypes.func,
+  dispatch: PropTypes.func,
+  // createBook: PropTypes.func,
 };
 
 BooksForm.defaultProps = {
-  createBook: () => {},
+  dispatch: () => {},
 };
 
 const mapDispatchToProps = (dispatch) => ({
