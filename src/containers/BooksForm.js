@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { uuid } from 'uuidv4';
 import { createBook } from '../actions/index';
-import types from '../actions/types';
 
 const BooksForm = (props) => {
   const categories = [
@@ -18,7 +17,7 @@ const BooksForm = (props) => {
   const [category, setCategory] = useState(categories[0]);
   const [title, setTitle] = useState('');
   const handleChange = (e) => {
-    if (e.nativeEvent.inputType === 'insertText') {
+    if (e.nativeEvent.inputType === 'insertText' || e.nativeEvent.inputType === 'deleteContentBackward') {
       setTitle(e.target.value);
     } else {
       setCategory(e.target.value);
@@ -31,12 +30,9 @@ const BooksForm = (props) => {
       category,
       id: uuid(),
     };
-    props.dispatch({
-      type: types.ADD_BOOK,
-      payload: book
-    })
-    setTitle(categories[0]);
-    setCategory('');
+    props.createBook(book);
+    setTitle('');
+    setCategory(categories[0]);
   };
   return (
     <form>
@@ -49,18 +45,17 @@ const BooksForm = (props) => {
           ))
         }
       </select>
-      <button type="submit" onSubmit={handleSubmit}>Save</button>
+      <button type="button" onClick={handleSubmit}>Save</button>
     </form>
   );
 };
 
 BooksForm.propTypes = {
-  dispatch: PropTypes.func,
-  // createBook: PropTypes.func,
+  createBook: PropTypes.func,
 };
 
 BooksForm.defaultProps = {
-  dispatch: () => {},
+  createBook: () => {},
 };
 
 const mapDispatchToProps = (dispatch) => ({
