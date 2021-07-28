@@ -6,43 +6,68 @@ import CategoryFilter from '../components/CategoryFilter';
 import { removeBook } from '../actions/index';
 
 const BooksList = (props) => {
-  const { books } = props;
+  const { filter, books } = props;
   const handleRemoveBook = (book) => {
     props.removeBook(book);
+  };
+  const display = () => {
+    if (filter === 'All') {
+      books.map((book) => (
+        <Book key={book.id} book={book} handleRemoveBook={handleRemoveBook} />
+      ));
+    } else {
+      const filteredBooks = books.filter(((book) => book.category === filter));
+      filteredBooks.map((book) => (
+        <Book key={book.id} book={book} handleRemoveBook={handleRemoveBook} />
+      ));
+    }
+  };
+  const handleFilterChange = (e) => {
+    props.changeFilter(e.target.value);
   };
   return (
     <div>
       <table>
-        <tr>
-          <th>Title</th>
-          <th>
-            Category
-            <CategoryFilter />
-          </th>
-          <th>Book ID</th>
-          <th>Action</th>
-        </tr>
-        {
-          books.map((book) => (
-            <Book key={book.id} book={book} handleRemoveBook={handleRemoveBook} />
-          ))
-        }
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>
+              Category
+              <CategoryFilter handleFilterChange={handleFilterChange} />
+            </th>
+            <th>Book ID</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {display}
+        </tbody>
       </table>
     </div>
   );
 };
 
 BooksList.propTypes = {
+  filter: PropTypes.string.isRequired,
   books: PropTypes.arrayOf(PropTypes.any).isRequired,
   removeBook: PropTypes.func.isRequired,
+  changeFilter: PropTypes.func.isRequired,
 };
+
+// BooksList.defaultProps = {
+//   changeFilter: () => {},
+// };
 
 const mapStateToProps = (state) => ({
   books: state.books,
+  filter: state.filter,
 });
 const mapDispatchToProps = (dispatch) => ({
   removeBook: (book) => {
     dispatch(removeBook(book));
+  },
+  changeFilter: (value) => {
+    dispatch(removeBook(value));
   },
 });
 

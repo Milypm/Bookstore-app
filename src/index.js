@@ -8,18 +8,17 @@ import bookReducer from './reducers/books';
 import reportWebVitals from './reportWebVitals';
 
 const initialState = {
+  filter: '',
   books: [
     {
       title: 'Learn React',
       category: 'Learning',
       id: uuid(),
-      filter: 'All',
     },
     {
       title: 'Learn Redux',
       category: 'Learning',
       id: uuid(),
-      filter: 'All',
     },
   ],
 };

@@ -1,7 +1,5 @@
-// import React, { useState } from 'react';
-// import PropTypes from 'prop-types';
-
-const CategoryFilter = () => {
+const CategoryFilter = (changeFilter) => {
+  console.log(changeFilter);
   const filterCategories = [
     'All',
     'Action',
@@ -14,7 +12,7 @@ const CategoryFilter = () => {
   ];
   return (
     <form>
-      <select id="filterCategories" name="filterCategories">
+      <select id="filterCategories" name="filterCategories" onChange={changeFilter}>
         {
           filterCategories.map((filterCategory) => (
             <option key={filterCategory} value={filterCategory.toLowerCase()}>
