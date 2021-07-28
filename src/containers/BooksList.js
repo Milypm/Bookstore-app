@@ -7,7 +7,7 @@ import { removeBook } from '../actions/index';
 const BooksList = (props) => {
   const { books } = props;
   const handleRemoveBook = (book) => {
-    removeBook(book);
+    props.removeBook(book);
   };
   return (
     <div>
@@ -36,7 +36,7 @@ BooksList.propTypes = {
 const mapStateToProps = (state) => ({
   books: state.books,
 });
-const mapDispatchToProps = () => ({
+const mapDispatchToProps = (dispatch) => ({
   removeBook: () => {
     dispatch(removeBook());
   },
