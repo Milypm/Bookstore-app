@@ -24,7 +24,7 @@ const BooksList = (props) => {
             <th>Title</th>
             <th>
               Category
-              <CategoryFilter handleFilterChange={handleFilterChange} />
+              <CategoryFilter handleFilterChange={handleFilterChange} filterValue={props.filter} />
             </th>
             <th>Book ID</th>
             <th>Action</th>
@@ -51,7 +51,7 @@ BooksList.propTypes = {
 
 const mapStateToProps = (state) => ({
   books: state.books,
-  filter: state.filter.filter,
+  filter: state.filter,
 });
 const mapDispatchToProps = (dispatch) => ({
   removeBook: (book) => {
