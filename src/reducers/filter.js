@@ -1,7 +1,5 @@
-const CHANGE_FILTER = 'CHANGE_FILTER';
-
 const categoryFilter = (state = {}, action) => {
-  switch (action.type === CHANGE_FILTER) {
+  switch (action.type) {
     case action.payload === 'Action':
       return { ...state, filter: action.payload };
     case action.payload === 'Biography':

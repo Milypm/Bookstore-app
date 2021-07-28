@@ -2,7 +2,9 @@ import { combineReducers } from 'redux';
 import bookReducer from './books';
 import categoryFilter from './filter';
 
-export default combineReducers({
+const reducersCombine = combineReducers({
   books: bookReducer,
   filter: categoryFilter,
 });
+console.log('reducersCombine', reducersCombine);
+export default reducersCombine;

@@ -4,11 +4,11 @@ import { uuid } from 'uuidv4';
 import { createStore } from 'redux';
 import ReactDOM from 'react-dom';
 import App from './components/App';
-import bookReducer from './reducers/books';
+import reducersCombine from './reducers/index';
 import reportWebVitals from './reportWebVitals';
 
 const initialState = {
-  filter: '',
+  filter: 'All',
   books: [
     {
       title: 'Learn React',
@@ -22,8 +22,8 @@ const initialState = {
     },
   ],
 };
-const store = createStore(bookReducer, initialState);
-
+const store = createStore(reducersCombine, initialState);
+console.log(initialState.filter);
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
