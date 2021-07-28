@@ -20,7 +20,7 @@ const BooksList = (props) => {
         </tr>
         {
           books.map((book) => (
-            <Book key={book.id} book={book} handleRemove={handleRemoveBook} />
+            <Book key={book.id} book={book} handleRemoveBook={handleRemoveBook} />
           ))
         }
       </table>
@@ -37,8 +37,8 @@ const mapStateToProps = (state) => ({
   books: state.books,
 });
 const mapDispatchToProps = (dispatch) => ({
-  removeBook: () => {
-    dispatch(removeBook());
+  removeBook: (book) => {
+    dispatch(removeBook(book));
   },
 });
 
