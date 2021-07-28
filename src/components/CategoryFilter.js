@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const CategoryFilter = (props) => {
-  const { handleFilterChange } = props;
+  const { handleFilterChange, filterValue } = props;
   const filterCategories = [
     'All',
     'Action',
@@ -14,7 +14,7 @@ const CategoryFilter = (props) => {
   ];
   return (
     <form>
-      <select id="filterCategories" name="filterCategories" onChange={(e) => handleFilterChange(e)}>
+      <select id="filterCategories" name="filterCategories" onChange={handleFilterChange()} value={filterValue}>
         {
           filterCategories.map((filterCategory) => (
             <option key={filterCategory} value={filterCategory.toLowerCase()}>
@@ -28,5 +28,6 @@ const CategoryFilter = (props) => {
 };
 CategoryFilter.propTypes = {
   handleFilterChange: PropTypes.func.isRequired,
+  filterValue: PropTypes.string.isRequired,
 };
 export default CategoryFilter;
