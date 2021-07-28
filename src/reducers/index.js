@@ -3,8 +3,7 @@ import bookReducer from './books';
 import categoryFilter from './filter';
 
 const reducersCombine = combineReducers({
-  books: bookReducer,
   filter: categoryFilter,
+  books: bookReducer,
 });
-console.log('reducersCombine', reducersCombine);
 export default reducersCombine;

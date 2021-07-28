@@ -1,18 +1,18 @@
 const categoryFilter = (state = {}, action) => {
-  switch (action.type) {
-    case action.payload === 'Action':
+  switch (action.payload) {
+    case 'Action':
       return { ...state, filter: action.payload };
-    case action.payload === 'Biography':
+    case 'Biography':
       return { ...state, filter: action.payload };
-    case action.payload === 'History':
+    case 'History':
       return { ...state, filter: action.payload };
-    case action.payload === 'Horror':
+    case 'Horror':
       return { ...state, filter: action.payload };
-    case action.payload === 'Kids':
+    case 'Kids':
       return { ...state, filter: action.payload };
-    case action.payload === 'Learning':
+    case 'Learning':
       return { ...state, filter: action.payload };
-    case action.payload === 'Sci-Fi':
+    case 'Sci-Fi':
       return { ...state, filter: action.payload };
     default:
       return { ...state, filter: 'All' };

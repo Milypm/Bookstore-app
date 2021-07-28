@@ -8,7 +8,7 @@ import reducersCombine from './reducers/index';
 import reportWebVitals from './reportWebVitals';
 
 const initialState = {
-  filter: 'All',
+  filter: '',
   books: [
     {
       title: 'Learn React',
@@ -23,7 +23,6 @@ const initialState = {
   ],
 };
 const store = createStore(reducersCombine, initialState);
-console.log(initialState.filter);
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
@@ -32,5 +31,4 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root'),
 );
-
 reportWebVitals();

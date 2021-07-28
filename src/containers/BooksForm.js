@@ -29,8 +29,8 @@ const BooksForm = (props) => {
       title,
       category,
       id: uuid(),
-      filter: 'All',
     };
+    console.log(book);
     props.createBook(book);
     setTitle('');
     setCategory(categories[0]);

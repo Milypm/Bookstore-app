@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 
 const CategoryFilter = (props) => {
-  console.log('change category');
   const { handleFilterChange } = props;
   const filterCategories = [
     'All',

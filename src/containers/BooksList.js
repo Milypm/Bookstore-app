@@ -7,12 +7,13 @@ import { removeBook, changeFilter } from '../actions/index';
 
 const BooksList = (props) => {
   const { filter, books } = props;
-  console.log(typeof filter);
+  console.log(books);
   const booksList = filter === 'All' ? books : books.filter(((book) => book.category === filter));
   const handleRemoveBook = (book) => {
     props.removeBook(book);
   };
   const handleFilterChange = (e) => {
+    e.preventDefault();
     props.changeFilter(e);
   };
   return (
@@ -50,7 +51,7 @@ BooksList.propTypes = {
 
 const mapStateToProps = (state) => ({
   books: state.books,
-  filter: state.filter,
+  filter: state.filter.filter,
 });
 const mapDispatchToProps = (dispatch) => ({
   removeBook: (book) => {
