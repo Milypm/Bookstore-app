@@ -8,7 +8,7 @@ import reducersCombine from './reducers/index';
 import reportWebVitals from './reportWebVitals';
 
 const initialState = {
-  filter: '',
+  filter: 'All',
   books: [
     {
       title: 'Learn React',

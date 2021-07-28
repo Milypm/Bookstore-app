@@ -14,7 +14,7 @@ const CategoryFilter = (props) => {
   ];
   return (
     <form>
-      <select id="filterCategories" name="filterCategories" onChange={handleFilterChange()} value={filterValue}>
+      <select id="filterCategories" name="filterCategories" onChange={(e) => handleFilterChange(e)} value={filterValue}>
         {
           filterCategories.map((filterCategory) => (
             <option key={filterCategory} value={filterCategory.toLowerCase()}>

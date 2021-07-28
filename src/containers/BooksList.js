@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
@@ -7,15 +7,17 @@ import { removeBook, changeFilter } from '../actions/index';
 
 const BooksList = (props) => {
   const { filter, books } = props;
-  console.log(books);
-  const booksList = filter === 'All' ? books : books.filter(((book) => book.category === filter));
+  const [booksList, setBooksList] = useState([]);
   const handleRemoveBook = (book) => {
     props.removeBook(book);
   };
   const handleFilterChange = (e) => {
-    e.preventDefault();
-    props.changeFilter(e);
+    props.changeFilter(e.target.value);
   };
+  useEffect(() => {
+    console.log('HERRRE ==>', books, filter.filter);
+    setBooksList(filter.filter === 'All' ? books : books.filter(((book) => book.category === filter)));
+  }, []);
   return (
     <div>
       <table>
@@ -24,7 +26,7 @@ const BooksList = (props) => {
             <th>Title</th>
             <th>
               Category
-              <CategoryFilter handleFilterChange={handleFilterChange} filterValue={props.filter} />
+              <CategoryFilter handleFilterChange={handleFilterChange} filterValue={filter} />
             </th>
             <th>Book ID</th>
             <th>Action</th>
