@@ -13,11 +13,13 @@ const initialState = {
       title: 'Learn React',
       category: 'Learning',
       id: uuid(),
+      filter: 'All',
     },
     {
       title: 'Learn Redux',
       category: 'Learning',
       id: uuid(),
+      filter: 'All',
     },
   ],
 };
