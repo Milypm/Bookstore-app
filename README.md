@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 # Bookstore App With React-Redux
 
-<!-- ![img_1](https://user-images.githubusercontent.com/54684961/126818315-2ed6d060-90c8-4697-8fad-054f87938bc7.png) -->
+![img_1](https://user-images.githubusercontent.com/54684961/127576541-177c6e55-7f14-4371-a984-e8d39aa7f88e.png)
 
 Web application for helping a (ficitonal) bookstore company organize and manage their online material.
 
@@ -14,6 +14,7 @@ You can visit the live project here: [Bookstore App](https://magic-bookstore-app
 - create-react-app
 - Redux
 - react-redux
+- uuidv4
 - JavaScript
 - JSX
 - CSS
@@ -30,10 +31,6 @@ You can visit the live project here: [Bookstore App](https://magic-bookstore-app
 4. On your terminal, run 'npm start'
 5. Browser should open automatically, or open [http://localhost:3000](http://localhost:3000)
 6. You should see "Bookstore!" on the browser white screen
-
-<!-- ## Tests
-- Go to the project's root directory
-- Run 'npm test' -->
 
 ## Authors
 **Pacifique Linjanja** :man_technologist:
