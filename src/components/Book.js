@@ -17,20 +17,22 @@ const Book = ({ book, handleRemoveBook }) => {
         </p>
       </div>
       <div className="book-item-right">
-        <div className="item-right">
-          <p>64%</p>
-          <p>Completed</p>
+        <div className="item-right-percent">
+          <div className="Oval-2" />
+          <div className="div-percent">
+            <p className="book-percent">64%</p>
+            <p className="book-completed">Completed</p>
+          </div>
         </div>
-        <div className="item-right">
+        <div className="item-right-chapter">
           <p className="current-chapter">CURRENT CHAPTER</p>
-          <p className="chapter-number">CHAPTER 15</p>
+          <p className="chapter-number">Chapter 15</p>
           <button type="button">UPDATE PROGRESS</button>
         </div>
       </div>
     </div>
   );
 };
-
 Book.propTypes = {
   book: PropTypes.shape({
     id: PropTypes.string,
@@ -39,5 +41,4 @@ Book.propTypes = {
   }).isRequired,
   handleRemoveBook: PropTypes.func.isRequired,
 };
-
 export default Book;

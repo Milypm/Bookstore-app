@@ -53,19 +53,15 @@ const BooksForm = (props) => {
     </div>
   );
 };
-
 BooksForm.propTypes = {
   createBook: PropTypes.func,
 };
-
 BooksForm.defaultProps = {
   createBook: () => {},
 };
-
 const mapDispatchToProps = (dispatch) => ({
   createBook: (book) => {
     dispatch(createBook(book));
   },
 });
-
 export default connect(null, mapDispatchToProps)(BooksForm);

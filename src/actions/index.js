@@ -14,6 +14,21 @@ export const initialState = {
       category: 'learning',
       id: uuid(),
     },
+    {
+      title: 'World War I',
+      category: 'history',
+      id: uuid(),
+    },
+    {
+      title: 'The Shining',
+      category: 'horror',
+      id: uuid(),
+    },
+    {
+      title: 'The Little Mermaid',
+      category: 'kids',
+      id: uuid(),
+    },
   ],
 };
 

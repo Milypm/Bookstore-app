@@ -14,7 +14,7 @@
 }
 
 .div-title-filter {
-  width: 43%;
+  width: 40%;
   margin: 0;
   display: flex;
   align-items: center;
@@ -29,6 +29,18 @@
 
 .div-title-filter h4 {
   color: #121212;
+}
+
+.form-filter select {
+  width: 88%;
+  border: 1px solid #e8e8e8;
+  background: #fff;
+  font-weight: 400;
+  color: #888;
+}
+
+.form-filter option {
+  color: #888;
 }
 
 .div-icon {
