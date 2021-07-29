@@ -1,15 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../styles/booksList.css';
 
 const Book = ({ book, handleRemoveBook }) => {
-  const { id, title, category } = book;
+  const { title, category } = book;
   return (
-    <tr>
-      <td>{title}</td>
-      <td>{category}</td>
-      <td>{id}</td>
-      <td>
-        <button type="button" onClick={() => handleRemoveBook(book)}>Remove Book</button>
+    <tr className="book-tr">
+      <td className="book-td-left">
+        <p className="book-category">{category}</p>
+        <p className="book-title">{title}</p>
+        <p className="book-author">Book&apos;s Author</p>
+        <p className="book-actions">
+          <span>Comments</span>
+          <button type="button" onClick={() => handleRemoveBook(book)}>Remove Book</button>
+          <span>Edit</span>
+        </p>
+      </td>
+      <td className="book-td-middle">
+        <p>64%</p>
+        <p>Completed</p>
+      </td>
+      <td className="book-td-right">
+        <p className="current-chapter">CURRENT CHAPTER</p>
+        <p className="chapter-number">CHAPTER 15</p>
+        <button type="button">UPDATE PROGRESS</button>
       </td>
     </tr>
   );

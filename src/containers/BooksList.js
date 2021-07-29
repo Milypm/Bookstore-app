@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
-import CategoryFilter from '../components/CategoryFilter';
+// import CategoryFilter from '../components/CategoryFilter';
 import { removeBook, changeFilter } from '../actions/index';
+import '../styles/booksList.css';
 
 const BooksList = (props) => {
   const { filter, books } = props;
@@ -11,9 +12,9 @@ const BooksList = (props) => {
   const handleRemoveBook = (book) => {
     props.removeBook(book);
   };
-  const handleFilterChange = (e) => {
-    props.changeFilter(e.target.value);
-  };
+  // const handleFilterChange = (e) => {
+  //   props.changeFilter(e.target.value);
+  // };
   useEffect(() => {
     setBooksList(filter === 'all' ? books : books.filter(((book) => book.category === filter)));
   }, [books, filter]);
@@ -21,7 +22,8 @@ const BooksList = (props) => {
     <div>
       <table>
         <thead>
-          <tr>
+          &apos;&apos;
+          {/* <tr>
             <th>Title</th>
             <th>
               Category
@@ -29,7 +31,7 @@ const BooksList = (props) => {
             </th>
             <th>Book ID</th>
             <th>Action</th>
-          </tr>
+          </tr> */}
         </thead>
         <tbody>
           {
@@ -47,7 +49,7 @@ BooksList.propTypes = {
   filter: PropTypes.string.isRequired,
   books: PropTypes.arrayOf(PropTypes.any).isRequired,
   removeBook: PropTypes.func.isRequired,
-  changeFilter: PropTypes.func.isRequired,
+  // changeFilter: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
