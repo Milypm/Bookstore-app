@@ -2,16 +2,16 @@ import { uuid } from 'uuidv4';
 import types from './types';
 
 export const initialState = {
-  filter: 'All',
+  filter: 'all',
   books: [
     {
       title: 'Learn React',
-      category: 'Learning',
+      category: 'learning',
       id: uuid(),
     },
     {
       title: 'Learn Redux',
-      category: 'Learning',
+      category: 'learning',
       id: uuid(),
     },
   ],

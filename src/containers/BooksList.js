@@ -9,17 +9,14 @@ const BooksList = (props) => {
   const { filter, books } = props;
   const [booksList, setBooksList] = useState([]);
   const handleRemoveBook = (book) => {
-    // console.log('ICI', book);
     props.removeBook(book);
   };
   const handleFilterChange = (e) => {
     props.changeFilter(e.target.value);
   };
   useEffect(() => {
-    console.log('HERRRE ==>', books, filter);
-    setBooksList(filter === 'All' ? books : books.filter(((book) => book.category === filter)));
-    console.log(booksList);
-  }, []);
+    setBooksList(filter === 'all' ? books : books.filter(((book) => book.category === filter)));
+  }, [books, filter]);
   return (
     <div>
       <table>
@@ -36,7 +33,7 @@ const BooksList = (props) => {
         </thead>
         <tbody>
           {
-            books.map((book) => (
+            booksList.map((book) => (
               <Book key={book.id} book={book} handleRemoveBook={handleRemoveBook} />
             ))
           }

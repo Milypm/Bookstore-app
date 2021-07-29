@@ -30,7 +30,6 @@ const BooksForm = (props) => {
       category,
       id: uuid(),
     };
-    console.log(book);
     props.createBook(book);
     setTitle('');
     setCategory(categories[0]);
