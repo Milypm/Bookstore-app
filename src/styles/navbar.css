@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;700&display=swap');
+
+.navbar {
+  box-sizing: content-box;
+  width: auto;
+  margin: 0;
+  padding: 0 80px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e8e8e8;
+  font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.813rem;
+  background: #fff;
+}
+
+.div-title-filter {
+  width: 43%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.div-title-filter h1 {
+  font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.875rem;
+  color: #0290ff;
+}
+
+.div-title-filter h4 {
+  color: #121212;
+}
+
+.div-icon {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.fa-user-astronaut {
+  font-size: 20px;
+  padding: 9px 11px;
+  border-radius: 50%;
+  border: 1px solid #e8e8e8;
+  color: #0290ff;
+}

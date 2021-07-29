@@ -19,29 +19,23 @@ const BooksList = (props) => {
     setBooksList(filter === 'all' ? books : books.filter(((book) => book.category === filter)));
   }, [books, filter]);
   return (
-    <div>
-      <table>
-        <thead>
-          &apos;&apos;
-          {/* <tr>
-            <th>Title</th>
-            <th>
-              Category
-              <CategoryFilter handleFilterChange={handleFilterChange} filterValue={filter} />
-            </th>
-            <th>Book ID</th>
-            <th>Action</th>
-          </tr> */}
-        </thead>
-        <tbody>
-          {
-            booksList.map((book) => (
-              <Book key={book.id} book={book} handleRemoveBook={handleRemoveBook} />
-            ))
-          }
-        </tbody>
-      </table>
-    </div>
+    <section className="books-section">
+      {/* &apos;&apos;
+      <tr>
+        <th>Title</th>
+        <th>
+          Category
+          <CategoryFilter handleFilterChange={handleFilterChange} filterValue={filter} />
+        </th>
+        <th>Book ID</th>
+        <th>Action</th>
+      </tr> */}
+      {
+        booksList.map((book) => (
+          <Book key={book.id} book={book} handleRemoveBook={handleRemoveBook} />
+        ))
+      }
+    </section>
   );
 };
 

@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;700&display=swap');
+
+.books-section {
+  box-sizing: content-box;
+  width: auto;
+  margin: 15px 0 30px 0;
+  padding: 0 80px;
+  background-color: #fafafa;
+}
+
+.book-item {
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  background: #fff;
+  margin-top: 15px;
+  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  display: flex;
+  font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 300;
+}
+
+.book-item-left {
+  width: 50%;
+  font-size: 0.875rem;
+  padding: 0;
+}
+
+.book-category {
+  margin: 0;
+  font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+  color: #121212;
+  text-transform: capitalize;
+  font-weight: 700;
+  width: 3.063rem;
+  height: 1.125rem;
+  margin: 0 2.438rem 0 0;
+  opacity: 0.5;
+  font-size: 0.875rem;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.book-title {
+  color: #121212;
+  margin: 0;
+  font-weight: 700;
+  width: 12.313rem;
+  height: 1.813rem;
+  margin: 0.188rem 20.188rem 0 0;
+  font-size: 1.375rem;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+}
+
+.book-author {
+  color: #4386bf;
+  margin: 0;
+  width: 6.688rem;
+  height: 1.188rem;
+  margin: 0.25rem 0 0;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.book-actions {
+  width: fit-content;
+  padding: 0;
+}
+
+.actions-border {
+  color: #4386bf;
+  border: none;
+  background: transparent;
+  padding: 0 10px 0 0;
+  width: 4.563rem;
+  height: 1.188rem;
+  margin: 0.188rem 0.938rem 0.125rem 0;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  border-right: 1px solid #e8e8e8;
+}
+
+.actions-border:hover {
+  cursor: pointer;
+}
+
+.book-edit {
+  border-right: transparent;
+}
+
+.book-item-right {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
