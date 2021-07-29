@@ -1,21 +1,15 @@
+import { initialState } from '../actions';
 import types from '../actions/types';
 
-const bookReducer = (state = {}, action) => {
-  let newState = state;
-  console.log('newState 1', newState);
+const bookReducer = (state = initialState.books, action) => {
   switch (action.type) {
     case types.ADD_BOOK:
-      newState = { ...state, books: [...state.books, action.payload] };
-      console.log('newState 2', newState);
-      return newState;
+      return [...state, action.payload];
     case types.REMOVE_BOOK:
-      newState = {
-        ...newState,
-        books: newState.books.filter((book) => book.id !== action.payload),
-      };
-      return newState;
+      console.log(action.payload);
+      return [...state].filter((book) => book.id !== action.payload.id);
     default:
-      return newState;
+      return state;
   }
 };
 export default bookReducer;

@@ -1,9 +1,10 @@
+import { initialState } from '../actions';
 import types from '../actions/types';
 
-const categoryFilter = (state = 'All', action) => {
+const categoryFilter = (state = initialState.filter, action) => {
   switch (action.type) {
     case types.CHANGE_FILTER:
-      return { ...state, filter: action.payload };
+      return action.payload;
     default:
       return state;
   }
