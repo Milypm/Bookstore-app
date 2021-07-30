@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import '../styles/navbar.css';
 
 const CategoryFilter = (props) => {
   const { handleFilterChange, filterValue } = props;
@@ -13,7 +14,7 @@ const CategoryFilter = (props) => {
     'Sci-Fi',
   ];
   return (
-    <form>
+    <form className="form-filter">
       <select id="filterCategories" name="filterCategories" onChange={(e) => handleFilterChange(e)} value={filterValue}>
         {
           filterCategories.map((filterCategory) => (

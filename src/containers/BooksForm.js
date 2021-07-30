@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { uuid } from 'uuidv4';
 import { createBook } from '../actions/index';
+import '../styles/booksForm.css';
 
 const BooksForm = (props) => {
   const categories = [
@@ -35,33 +36,32 @@ const BooksForm = (props) => {
     setCategory(categories[0]);
   };
   return (
-    <form>
-      <input placeholder="Title" value={title} onChange={handleChange} />
-      <label htmlFor="categories">Choose a Category:</label>
-      <select id="categories" name="categories" value={category} onChange={handleChange}>
-        {
-          categories.map((category) => (
-            <option key={category} value={category.toLowerCase()}>{category}</option>
-          ))
-        }
-      </select>
-      <button type="button" onClick={handleSubmit}>Save</button>
-    </form>
+    <div className="div-book-form">
+      <h4 htmlFor="add-book">ADD NEW BOOK</h4>
+      <form className="book-form">
+        <input placeholder="Book title" value={title} onChange={handleChange} />
+        <select className="form-select" id="categories" name="categories" value={category} onChange={handleChange}>
+          <option value="" hidden>Category</option>
+          {
+            categories.map((category) => (
+              <option key={category} value={category.toLowerCase()}>{category}</option>
+            ))
+          }
+        </select>
+        <button type="button" onClick={handleSubmit}>Save</button>
+      </form>
+    </div>
   );
 };
-
 BooksForm.propTypes = {
   createBook: PropTypes.func,
 };
-
 BooksForm.defaultProps = {
   createBook: () => {},
 };
-
 const mapDispatchToProps = (dispatch) => ({
   createBook: (book) => {
     dispatch(createBook(book));
   },
 });
-
 export default connect(null, mapDispatchToProps)(BooksForm);

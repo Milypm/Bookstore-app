@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;700&display=swap');
+
+.books-section {
+  box-sizing: content-box;
+  width: auto;
+  margin: 15px 0 30px 0;
+  padding: 0 80px;
+  background-color: #fafafa;
+}
+
+.book-item {
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  background: #fff;
+  margin-top: 15px;
+  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  display: flex;
+  font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 300;
+}
+
+.book-item-left {
+  width: 50%;
+  font-size: 0.875rem;
+  padding: 0;
+}
+
+.book-category {
+  font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+  color: #121212;
+  text-transform: capitalize;
+  font-weight: 700;
+  width: fit-content;
+  height: 1.125rem;
+  margin: 0 2.438rem 0 0;
+  opacity: 0.5;
+  font-size: 0.875rem;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.book-title {
+  color: #121212;
+  font-weight: 700;
+  width: 100%;
+  height: 1.813rem;
+  margin: 0.188rem 20.188rem 0 0;
+  font-size: 1.375rem;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+}
+
+.book-author {
+  color: #4386bf;
+  width: 100%;
+  height: 1.188rem;
+  margin: 0.25rem 0 0;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.book-actions {
+  width: fit-content;
+  padding: 0;
+}
+
+.actions-border {
+  color: #4386bf;
+  border: none;
+  background: transparent;
+  padding: 0 10px 0 0;
+  width: 4.563rem;
+  height: 1.188rem;
+  margin: 0.188rem 0.938rem 0.125rem 0;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  border-right: 1px solid #e8e8e8;
+}
+
+.actions-border:hover {
+  cursor: pointer;
+  color: #121212;
+  opacity: 0.5;
+}
+
+.book-edit {
+  border-right: transparent;
+}
+
+.book-item-right {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-right-percent {
+  box-sizing: border-box;
+  display: flex;
+  padding-top: 15px;
+}
+
+.Oval-2 {
+  width: 4.25rem;
+  height: 4.25rem;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 100%;
+  border: 5px solid;
+  border-color: #f3f3f3 #2274ee #2274ee #f3f3f3;
+  border-image-source: linear-gradient(to bottom, var(--medium-blue), var(--dodger-blue));
+  border-image-slice: 1;
+}
+
+.div-percent {
+  font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+  color: #121212;
+  height: 4.375rem;
+  border-right: 1px solid #e8e8e8;
+}
+
+.book-percent {
+  width: 4.25rem;
+  height: 2.438rem;
+  margin: 0.063rem 5.75rem 0 0.688rem;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.book-completed {
+  width: 5rem;
+  height: 1.125rem;
+  margin: 0 4.938rem 0.75rem 0.75rem;
+  opacity: 0.5;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.item-right-chapter {
+  display: flex;
+  height: 105px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
+  color: #121212;
+}
+
+.current-chapter {
+  width: fit-content;
+  height: 1.125rem;
+  margin: 0;
+  opacity: 0.5;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.chapter-number {
+  width: fit-content;
+  height: 1.313rem;
+  margin: 10px 0 0 0;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+}
+
+.item-right-chapter button {
+  width: 11.5rem;
+  height: 2.063rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  background: #0290ff;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 0.813rem;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+}
+
+.item-right-chapter button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
